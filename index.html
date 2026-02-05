@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Politiebegroting Ontleed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.12.0/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <h1>De politie peutert met 'vage algemeenheden' en 'halve (on)waarheden' honderden miljoenen extra los</h1>
+                <p class="lead">Stijgende criminaliteit, voortdurend personeelstekort, en een relatie met de burger die onder druk staat. En ondertussen vinden er "opeenvolgende bezuinigingen" plaats. Althans, dat is hoe de politie al jaren haar situatie schetst. Uit de Rijksfinanciën en cijfers van de politie zelf blijkt een heel ander – en bovendien tegenstrijdig – beeld.</p>
+                <div class="scroll-indicator">
+                    <span>Scroll naar beneden</span>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Context Section -->
+        <section id="context">
+            <div class="container">
+                <p>'De politie staat écht onder water. We hebben een fórs probleem!' exclameert Jan Struijs, de (huidig) voorman van 50PLUS en tevens oud-politieman en -vakbondsleider, in zijn openingsbijdrage aan het politiebegrotingsdebat, afgelopen 26 januari. De setting is het grijze decor van de Thorbeckezaal in het oude kantoor van Buitenlandse Zaken, waar de Tweede Kamer nu ruim 5,5 jaar huishoudt.</p>
+
+                <p>Op tafel ligt de begroting van de politie voor de komende jaren. Een begroting die onder een vergrootglas is komen te liggen sinds de politie en partners (regioburgemeesters, het OM en de centrale ondernemingsraad) een position paper publiceerde dat stelt dat de politie <strong>'minimaal 350 miljoen euro per jaar extra nodig heeft'</strong> om 'de strijd tegen criminaliteit niet te verliezen' en 'het maatschappelijk vertrouwen te behouden'.</p>
+
+                <p>Struijs is 'zeker niet van de blanco check', herhaalt hij meermaals, maar besluit uiteindelijk: 'Wij zullen alles steunen, àlles steunen, wat goed onderbouwt is [...] om de eerste 46 miljoenen te tackelen en op termijn de 350 miljoen voor elkaar te krijgen'.</p>
+
+                <p>De steun voor de politie is niet alleen beperkt tot oud-politieman Struijs, zo dienen Mutluer (GL/PvdA) en Dobbe (SP) een amendement in om het directe tekort van 46 miljoen in één keer te voldoen. Vier dagen na het debat worden de oppositie partijen rechts ingehaald door de coalitie, die in hun akkoord vastleggen jaarlijks <strong>€ 512 miljoen extra</strong> te zullen investeren.</p>
+
+                <div class="callout">
+                    <p>De vraag is: zijn deze extra miljoenen echt nodig om de veiligheid in de samenleving te garanderen?</p>
+                </div>
+
+                <p>Dr. Edwin Kruisbergen, wetenschappelijk medewerker bij het Ministerie van Justitie, meent van niet. Twee jaar terug al publiceerde hij het artikel 'Druk! Maar waarmee?' in vakblad Tijdschrift voor de Politie over de begroting van de politie, het werkaanbod en de effectiviteit. Zijn conclusie: <strong>Geld lijkt niet het probleem, en is dus ook niet de oplossing.</strong> Aan het eind noteert Kruisbergen daarbij:</p>
+
+                <p class="quote">"Zonder antwoorden op vragen blijft het debat hangen op vage algemeenheden, halve (on)waarheden of een roep om 'meer geld'"</p>
+
+                <p>Wij zetten de vage algemeenheden en halve (on)waarheden op een rij die ingezet werden voor deze ronde van de roep om 'meer geld':</p>
+            </div>
+        </section>
+
+        <!-- Scrollytelling Section 1: Bezuinigingen -->
+        <section id="scrolly-bezuinigingen">
+            <div class="chart-sticky-top">
+                <div id="chart-bezuinigingen" class="chart-container"></div>
+            </div>
+
+            <div class="text-steps-container">
+                <div class="text-step" data-step="0">
+                    <h2>1. Opeenvolgende bezuinigingen?</h2>
+                </div>
+
+                <div class="text-step" data-step="1">
+                    <p>Vertrekpunt van veel discussies over de politie is dat er al jaren bezuinigd wordt. Ook in de Strategisch Agenda Politie 2025–2030 – hét document waarin korpschef Janny Knol haar beleid voor de komende jaren uiteenzette – wordt gesproken van <strong>'opeenvolgende bezuinigingen'</strong>.</p>
+                </div>
+
+                <div class="text-step" data-step="2">
+                    <p>Echter, de Rijksfinanciën tonen een heel ander beeld: de politiebegroting was in 2015 nog <strong>€ 5,1 miljard</strong>...</p>
+                </div>
+
+                <div class="text-step" data-step="3">
+                    <p>...maar is in 2025 uitgegroeid tot <strong>€ 8,2 miljard</strong>.</p>
+                </div>
+
+                <div class="text-step" data-step="4">
+                    <p>Als de begroting vanaf 2015 slechts was meegegroeid met de inflatie, dan was die vorig jaar op <strong>€ 6,7 miljard</strong> blijven steken.</p>
+                </div>
+
+                <div class="text-step" data-step="5">
+                    <p>De claim van opeenvolgende bezuinigingen is dus moeilijk te rijmen met de <strong>€ 9,5 miljard extra</strong> die bovenop inflatie is begroot.</p>
+                </div>
+
+                <div class="text-step" data-step="6">
+                    <p>Daar komt nog bij dat de politiebegroting structureel wordt overschreden: in 2015 nog met slechts <strong>€ 13 miljoen</strong> maar tussen 2022 en 2024 met ruim <strong>€ 500 miljoen gemiddeld</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- International Comparison -->
+        <section id="international">
+            <div class="container">
+                <p>Ook in vergelijking met onze naburige landen geeft Nederland relatief een groot deel uit aan de politie: <strong>1,9%</strong> van de totale Rijksbegroting. Alleen de Belgen investeren evenveel in de politie; Duitsland (1,5%), Frankrijk (1,6%), Denemarken (1,1%), Luxemburg (1,2%) investeren aanzienlijk minder.</p>
+            </div>
+        </section>
+
+        <!-- Scrollytelling Section 2: Criminaliteit -->
+        <section id="scrolly-criminaliteit">
+            <div class="sticky-container">
+                <div id="chart-criminaliteit" class="chart-container"></div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step" data-step="0">
+                    <div class="step-content">
+                        <h2>2. Stijgende criminaliteit?</h2>
+                        <p>Het zou kunnen zijn dat deze grotere investeringen nodig zijn omdat we in Nederland met meer – of zelfs stijgende – criminaliteit kampen. Dat is zeker het beeld dat het position paper van de politie wekt:</p>
+                        <p class="quote">"Maar de druk neemt toe. Er komt steeds meer op de politie af."</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="1">
+                    <div class="step-content">
+                        <p>Dit strookt niet met een objectieve weergave van de cijfers van de politie zelf. Deze tonen dat het aantal geregistreerde misdrijven sinds de eeuwwisseling <strong>drastisch is gedaald</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="2">
+                    <div class="step-content">
+                        <p>Geweldsmisdrijven daalden met <strong>een kwart</strong> sinds 2000...</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="3">
+                    <div class="step-content">
+                        <p>...en vermogensmisdrijven zijn zelfs <strong>gehalveerd</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="4">
+                    <div class="step-content">
+                        <p>Het is waar dat deze grote dalende trend de laatste jaren lijkt te stabiliseren. Maar van een stijgende criminaliteit die extra investeringen rechtvaardigt, is geen sprake.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scrollytelling Section 3: Opheldering -->
+        <section id="scrolly-opheldering">
+            <div class="sticky-container">
+                <div id="chart-opheldering" class="chart-container"></div>
+            </div>
+
+            <div class="steps-container">
+                <div class="step" data-step="0">
+                    <div class="step-content">
+                        <h2>3. Verbinding met de samenleving onder druk?</h2>
+                        <p>Ook de verbinding van de politie met de samenleving zou steeds verder onder druk staan. De strategische agenda identificeert dit als één van de hoofdthema's van de komende vijf jaar en redeneert dat dit komt doordat de "nabijheid tot de burger is afgenomen".</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="1">
+                    <div class="step-content">
+                        <p>Tegelijkertijd zien we dat het <strong>ophelderingspercentage</strong> – het percentage misdrijven dat door de politie wordt opgelost – juist is <strong>gedaald</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="step" data-step="2">
+                    <div class="step-content">
+                        <p>Vooral bij vermogensmisdrijven is de daling opvallend: van <strong>14,6%</strong> in 2010 naar slechts <strong>11,8%</strong> in 2024.</p>
+                        <p>Een frame die niet gebaseerd lijkt op enig empirisch bewijs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section id="conclusion">
+            <div class="container">
+                <h2>Conclusie</h2>
+                <p>De claim dat de politie kampt met opeenvolgende bezuinigingen, stijgende criminaliteit en afnemende verbinding met de samenleving wordt niet ondersteund door de cijfers.</p>
+
+                <div class="conclusion-points">
+                    <div class="point">
+                        <h3>❌ Geen bezuinigingen</h3>
+                        <p>De politiebegroting is sinds 2015 met € 3,1 miljard gestegen – € 1,5 miljard meer dan inflatie alleen zou vereisen.</p>
+                    </div>
+                    <div class="point">
+                        <h3>❌ Geen stijgende criminaliteit</h3>
+                        <p>Het aantal geregistreerde misdrijven is sinds 2000 met bijna de helft gedaald en stabiliseert recent.</p>
+                    </div>
+                    <div class="point">
+                        <h3>❌ Dalende effectiviteit</h3>
+                        <p>Het ophelderingspercentage daalt juist, ondanks hogere budgetten en minder criminaliteit.</p>
+                    </div>
+                </div>
+
+                <p>De vraag blijft: als geld niet het probleem is, wat dan wel?</p>
+            </div>
+        </section>
+
+        <!-- Sources -->
+        <section id="sources">
+            <div class="container">
+                <h2>Bronnen</h2>
+                <ul>
+                    <li><a href="https://www.politie.nl/informatie/strategische-agenda-politie-stevig-staan-in-deze-tijd.html" target="_blank">Strategische agenda Politie 2025–2030 (maart 2025)</a></li>
+                    <li><a href="https://www.politie.nl/nieuws/2025/september/30/00-partners-politie-350-miljoen-nodig-voor-strijd-tegen-criminaliteit.html" target="_blank">Lobbybrief politie en partners (30 september 2025)</a></li>
+                    <li><a href="https://www.kabinetsformatie2025.nl/site/binaries/site-content/collections/documents/2026/01/30/budgettaire-tabel-en-bijlage-bij-coalitieakkoord-aan-de-slag/budgettaire-tabel-en-bijlage-coalitieakkoord.pdf" target="_blank">Coalitieakkoord budgettaire-tabel</a></li>
+                    <li><a href="https://www.rijksfinancien.nl/visuals/2025/begroting/uitgaven/incl-premies/VI/31" target="_blank">Rijksfinanciën Politie</a></li>
+                    <li><a href="https://opendata.cbs.nl/#/CBS/nl/dataset/83648NED/table?fromstatweb" target="_blank">CBS-statline geregistreerde misdrijven en ophelderingspercentage</a></li>
+                    <li><a href="https://www.researchgate.net/publication/380998886_Druk_Maar_waarmee_Naar_een_rationeler_debat_over_werkaanbod_capaciteit_en_inzet_in_de_strafrechtketen" target="_blank">Artikel Tijdschrift voor de Politie - Dr. Edwin Kruisbergen</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
