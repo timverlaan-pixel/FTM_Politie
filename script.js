@@ -1,11 +1,15 @@
-// Follow the Money color palette
+// Follow the Money Official Brand Colors (Brand Manual V1 - December 2024)
 const colors = {
-    primary: '#FF6B35',      // FTM orange
-    secondary: '#1a1a1a',    // Dark/black
-    tertiary: '#E63946',     // FTM red
-    accent: '#999999',       // Neutral gray
-    dark: '#000000',
-    gray: '#666666'
+    primary: '#FF5725',      // FTM Rood (main brand color)
+    secondary: '#706F5F',    // Dollargroen
+    tertiary: '#A49B93',     // Zilver
+    accent: '#B48559',       // Goud
+    dark: '#000000',         // Zwart
+    offwhite: '#F5F1ED',     // Offwhite
+    // Supplementary colors (if needed)
+    duifgrijs: '#204951',    // Dove grey
+    bruinrood: '#B43C09',    // Brown-red
+    blauw: '#0068AF'         // Blue
 };
 
 // Parse Euro values from CSV
