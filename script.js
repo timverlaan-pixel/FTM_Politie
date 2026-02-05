@@ -177,24 +177,33 @@ function initBezuinigingenChart() {
             .text('€9,5 mrd extra');
     }
 
-    // Draw lines
+    // Draw lines with stroke colors
     const inflatieGroup = svg.append('g').attr('class', 'line-group-inflatie').style('opacity', 0);
     inflatieGroup.append('path')
         .datum(begrotingData)
         .attr('class', 'line line-inflatie')
-        .attr('d', lineInflatie);
+        .attr('d', lineInflatie)
+        .attr('stroke', colors.tertiary)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     const begrotingGroup = svg.append('g').attr('class', 'line-group-begroting').style('opacity', 0);
     begrotingGroup.append('path')
         .datum(begrotingData)
         .attr('class', 'line line-begroting')
-        .attr('d', lineBegroting);
+        .attr('d', lineBegroting)
+        .attr('stroke', colors.primary)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     const realisatieGroup = svg.append('g').attr('class', 'line-group-realisatie').style('opacity', 0);
     realisatieGroup.append('path')
         .datum(begrotingData)
         .attr('class', 'line line-realisatie')
-        .attr('d', lineRealisatie);
+        .attr('d', lineRealisatie)
+        .attr('stroke', colors.secondary)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     // Add end labels for each line
     const begrotingLabel = begrotingGroup.append('g').attr('class', 'end-label');
@@ -336,24 +345,33 @@ function initCriminaliteitChart() {
         .y(d => y(d.vermogen))
         .curve(d3.curveMonotoneX);
 
-    // Draw lines
+    // Draw lines with stroke colors
     const totaalGroup = svg.append('g').attr('class', 'line-group-totaal').style('opacity', 0);
     totaalGroup.append('path')
         .datum(misdrijvenData)
         .attr('class', 'line line-totaal')
-        .attr('d', lineTotaal);
+        .attr('d', lineTotaal)
+        .attr('stroke', colors.dark)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     const geweldGroup = svg.append('g').attr('class', 'line-group-geweld').style('opacity', 0);
     geweldGroup.append('path')
         .datum(misdrijvenData)
         .attr('class', 'line line-geweld')
-        .attr('d', lineGeweld);
+        .attr('d', lineGeweld)
+        .attr('stroke', colors.tertiary)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     const vermogenGroup = svg.append('g').attr('class', 'line-group-vermogen').style('opacity', 0);
     vermogenGroup.append('path')
         .datum(misdrijvenData)
         .attr('class', 'line line-vermogen')
-        .attr('d', lineVermogen);
+        .attr('d', lineVermogen)
+        .attr('stroke', colors.primary)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     // Legend
     const legend = svg.append('g')
@@ -454,24 +472,33 @@ function initOphelderingChart() {
         .y(d => y(d.geweld))
         .curve(d3.curveMonotoneX);
 
-    // Draw lines
+    // Draw lines with stroke colors
     const totaalGroup = svg.append('g').attr('class', 'line-group-totaal').style('opacity', 0);
     totaalGroup.append('path')
         .datum(ophelderingData)
         .attr('class', 'line line-totaal-opheldering')
-        .attr('d', lineTotaal);
+        .attr('d', lineTotaal)
+        .attr('stroke', colors.dark)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     const vermogenGroup = svg.append('g').attr('class', 'line-group-vermogen').style('opacity', 0);
     vermogenGroup.append('path')
         .datum(ophelderingData)
         .attr('class', 'line line-vermogen-opheldering')
-        .attr('d', lineVermogen);
+        .attr('d', lineVermogen)
+        .attr('stroke', colors.primary)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     const geweldGroup = svg.append('g').attr('class', 'line-group-geweld').style('opacity', 0);
     geweldGroup.append('path')
         .datum(ophelderingData)
         .attr('class', 'line line-geweld-opheldering')
-        .attr('d', lineGeweld);
+        .attr('d', lineGeweld)
+        .attr('stroke', colors.tertiary)
+        .attr('stroke-width', 3)
+        .attr('fill', 'none');
 
     // Legend
     const legend = svg.append('g')
