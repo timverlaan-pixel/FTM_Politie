@@ -216,7 +216,7 @@ function initBezuinigingenChart() {
         .attr('dy', '0.35em')
         .attr('font-size', '14px')
         .attr('font-weight', 'bold')
-        .attr('fill', colors.gray)
+        .attr('fill', colors.tertiary)
         .text(formatMillions(lastInflatieData.inflatie));
 
     const realisatieLabel = realisatieGroup.append('g').attr('class', 'end-label');
@@ -239,7 +239,7 @@ function initBezuinigingenChart() {
     const legendData = [
         { label: 'Begroting', class: 'line-begroting', color: colors.primary },
         { label: 'Realisatie', class: 'line-realisatie', color: colors.tertiary },
-        { label: 'Inflatie (2015)', class: 'line-inflatie', color: colors.gray }
+        { label: 'Inflatie (2015)', class: 'line-inflatie', color: colors.tertiary }
     ];
 
     legendData.forEach((item, i) => {
