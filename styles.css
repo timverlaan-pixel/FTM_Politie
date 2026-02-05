@@ -172,27 +172,29 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.9;
 }
 
-/* Scrollytelling Section - Chart sticky at top */
+/* Scrollytelling Section - Side-by-Side Layout */
 #scrolly-bezuinigingen {
     position: relative;
+    display: flex;
+    min-height: 100vh;
+    background: var(--ftm-offwhite);
 }
 
 .chart-sticky-top {
     position: sticky;
     top: 0;
-    height: 70vh;
+    width: 60%;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--ftm-offwhite);
-    z-index: 100;
-    border-bottom: 1px solid #E5E1DD;
 }
 
 .chart-container {
     width: 100%;
-    max-width: 750px;
-    height: 100%;
+    max-width: 700px;
+    height: 70vh;
     padding: 2rem;
 }
 
@@ -201,19 +203,19 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
 }
 
-/* Text steps container - scrolls below chart */
+/* Text steps container - scrolls on the left side */
 .text-steps-container {
-    position: relative;
-    z-index: 1;
+    width: 40%;
+    padding: 40px;
     background: var(--ftm-offwhite);
 }
 
 .text-step {
-    min-height: 40vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
+    justify-content: flex-start;
+    padding: 60px 0;
     opacity: 0.3;
     transition: opacity 0.6s ease;
 }
@@ -223,15 +225,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-step h2 {
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 
 .text-step p {
-    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    font-size: clamp(1rem, 2vw, 1.1rem);
     line-height: 1.7;
-    max-width: 550px;
-    margin: 0 auto;
+    max-width: 100%;
 }
 
 /* International Section */
@@ -436,15 +438,34 @@ h1, h2, h3, h4, h5, h6 {
         padding: 60px 20px;
     }
 
+    /* Mobile: Stack vertically - text on top, chart below */
+    #scrolly-bezuinigingen {
+        flex-direction: column;
+    }
+
+    .text-steps-container {
+        width: 100%;
+        padding: 20px;
+    }
+
     .chart-sticky-top {
+        position: relative;
+        width: 100%;
         height: 60vh;
+        order: -1; /* Chart appears first on mobile */
     }
 
     .chart-container {
         padding: 1rem;
+        height: 100%;
     }
 
-    .text-step,
+    .text-step {
+        min-height: 50vh;
+        padding: 40px 20px;
+    }
+
+    .step,
     .step {
         min-height: 50vh;
         padding: 40px 20px;
