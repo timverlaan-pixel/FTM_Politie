@@ -559,8 +559,8 @@ function initScrollytelling() {
     const scrollerCriminaliteit = scrollama();
     scrollerCriminaliteit
         .setup({
-            step: '#scrolly-criminaliteit .step',
-            offset: 0.5,
+            step: '#scrolly-criminaliteit .text-step',
+            offset: 0.7,
             debug: false
         })
         .onStepEnter(handleCriminaliteitStep)
@@ -572,8 +572,8 @@ function initScrollytelling() {
     const scrollerOpheldering = scrollama();
     scrollerOpheldering
         .setup({
-            step: '#scrolly-opheldering .step',
-            offset: 0.5,
+            step: '#scrolly-opheldering .text-step',
+            offset: 0.7,
             debug: false
         })
         .onStepEnter(handleOphelderingStep)
